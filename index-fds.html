@@ -12,10 +12,11 @@
     <link rel="preload" as="style" href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" />
     <link rel="preload" as="style" href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="preload" as="style" href="./style/style.css" />
+    
 
     <!-- 스타일링 -->
     <link rel="stylesheet" href="./style/style.css" />
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" /> 
   </head>
 
   <body>
@@ -31,14 +32,13 @@
           <h2 class="a11y-hidden">메인 메뉴</h2>
 
           <ul class="reset-list">
-            <!-- 비동기 데이터 바인딩 → 내비게이션 리스트 렌더링 (아래 템플릿 코드 활용) -->
-            <li><a href="./views/login.html">로그인</a></li>
-            <li><a href="./views/signup.html">회원 가입</a></li>
+            <li><a href="./views/login-fds.html">로그인</a></li>
+            <li><a href="./views/signup-fds.html">회원 가입</a></li>
             <li><a href="./views/ui-design.html">이디야 디자인</a></li>
-            <li><a href="./views/beverage.html">이디야 음료</a></li>
+            <li><a href="./views/beverage-fds.html">이디야 음료</a></li>
             <li><a href="./views/news-fds.html">이디야 뉴스</a></li>
             <li><a href="./views/store-fds.html">매장 찾기</a></li>
-            </ul>
+          </ul>
 
           <button type="button" class="button is-close-menu" title="메뉴 닫기" aria-label="메뉴 닫기">
             <span class="close" aria-hidden="true">×</span>
@@ -120,33 +120,32 @@
         </div>
       </div>
     </main>
-    <div class="footer-container">
-        <footer class="app-footer">
-          <div class="footer-container">
-            <div class="footer-brand">
-              <img src="./images/brand-dark.svg" alt="EDIYA COFFEE" />
-            </div>
-            <ul class="guide-list reset-list">
-              <li><a href="#">개인정보처리방침</a></li>
-              <li><a href="#">멤버스 이용약관</a></li>
-              <li><a href="#">가맹 안내</a></li>
-              <li><a href="#">대량쿠폰구매</a></li>
-              <li><a href="#">채용안내</a></li>
-              <li><a href="#">고객의 소리</a></li>
-              <li><a href="#">사이트맵</a></li>
-              <li><a href="#">점주의 방</a></li>
-            </ul>
-            <address class="address">
-              <span>서울특별시 강남구 논현로 636 이디야빌딩(서울특별시 강남구 논현동 221-17)</span>
-              <span><b>TEL : </b>02-543-6467</span>
-              <span><b>FAX : </b>02-543-7191</span>
-              <span><b>사업자등록번호 : </b>107-86-16302</span>
-              <span><b>통신판매업 신고 : </b>강남 제 002519호</span>
-              <span><b>대표이사 : </b>문창기</span>
-            </address>
-            <small class="copyright">&copy; 2017 EDIYA COFFEE COMPANY. ALL RIGHTS RESERVED..</small>
+    <div class="app-footer-container">
+      <footer class="app-footer">
+          <div class="footer-brand">
+            <img src="./images/brand-dark.svg" alt="EDIYA COFFEE" />
           </div>
-        </footer>        
+          <ul class="guide-list reset-list">
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">멤버스 이용약관</a></li>
+            <li><a href="#">가맹 안내</a></li>
+            <li><a href="#">대량쿠폰구매</a></li>
+            <li><a href="#">채용안내</a></li>
+            <li><a href="#">고객의 소리</a></li>
+            <li><a href="#">사이트맵</a></li>
+            <li><a href="#">점주의 방</a></li>
+          </ul>
+          <address class="address">
+            <span>서울특별시 강남구 논현로 636 이디야빌딩(서울특별시 강남구 논현동 221-17)</span>
+            <span><b>TEL : </b>02-543-6467</span>
+            <span><b>FAX : </b>02-543-7191</span>
+            <span><b>사업자등록번호 : </b>107-86-16302</span>
+            <span><b>통신판매업 신고 : </b>강남 제 002519호</span>
+            <span><b>대표이사 : </b>문창기</span>
+          </address>
+          <small class="copyright">&copy; 2017 EDIYA COFFEE COMPANY. ALL RIGHTS RESERVED..</small>
+        
+      </footer>
     </div>
     <button type="button" class="button-goToTop">
       <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
