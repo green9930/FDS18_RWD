@@ -18,7 +18,6 @@
     text-align: center;
 }
 
-
 .ediya-recommend-text {
     font-size: 1.4rem;
 }
@@ -30,7 +29,7 @@
 .ediya-recommend-text[lang='en']::after {
     content: "";
     width: 40px;
-    border: 1px solid var(--theme-primary);
+    border-top: 1px solid var(--theme-primary);
     display: inline-block; /* width 주려고 */    
 }
 
@@ -44,7 +43,6 @@
 .ediya-recommend-list {
     /* border-top: 2px solid red; */ /* 리스트 위치 보려고 임의로 넣은 선 */
     position: relative;
-    animation: bounce;
 }
 
 .ediya-recommend-beverage {
@@ -67,7 +65,7 @@
     display: inline-block;
     padding: 8px 24px;
     color: var(--theme-primary);
-    border: 1px solid currentcolor /* var(--theme-primary) */;
+    border: 1px solid currentColor /* var(--theme-primary) */;
 }
 
 /* 유튜브 영상 섹션 */
@@ -183,11 +181,6 @@
     text-overflow: ellipsis;
 }
 
-.ediya-news-date {
-
-}
-
-
 .ediya-news .icon-more {
     position: absolute;
     top: 15px;
@@ -250,7 +243,7 @@
     .ediya-recommend-text[lang='en']::after {
         content: "";
         width: 40px;
-        border: 1px solid var(--theme-primary);
+        border-top: 1px solid var(--theme-primary);
         display: block; /* EDIYA COFFEE 문구 아래에 선이 떨어지게 하려고*/
         margin: auto;    
         margin-top: 30px;
