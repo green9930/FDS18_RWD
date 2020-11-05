@@ -38,7 +38,6 @@
 .member-password {
     position: relative;
     height: 48px;
-    border-bottom: 1px solid currentColor;
 }
 
 .member-id {
@@ -55,22 +54,85 @@
     left: 0.5em;
     top: 15px;
     font-size: 1.8rem;
+    transition: all 0.2s;
 }
 
 .member-id input, 
 .member-password input {
     width: 100%;
-    height: 100%;
+    height: 48px;
     background-color: transparent;
     border: 0;
     color: #fff;
     padding: 0 1em;
+    border-bottom: 1px solid currentColor;
 }
 
 .member-id--error,
-.member-password--error,
-.button-password {
+.member-password--error {
     display: none;
+}
+
+.member-form .button-password {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 15px;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+/* 공통 멤버 폼 상태 디자인 (is--focus, is--valid, is--invalid, is--visible) */
+.is--focus label,
+.is--valid label,
+.is--invalid label {
+    font-size: 1.3rem;
+    transform: translate(-0.5em, -15px);
+}
+
+.member-form .is--invalid { /* id와 pw 선택 */
+    height: 70px;
+}
+
+.member-form .is--invalid [role="alert"] {
+    display: block;
+    margin-top: 5px;
+}
+
+.member-form .is--valid, 
+.member-form .is--invalid {
+    background-repeat: no-repeat;
+    background-position: 100% 20px;
+}
+
+.member-form .is--valid {
+    background-image: url(../images/icon-checked.svg);
+}
+
+.member-form .is--invalid {
+    background-image: url(../images/icon-warning.svg);
+}
+
+.is--focus .button-password {
+    display: block;
+}
+
+.button-password .ir {
+    display: block;
+    width: inherit;
+    height: inherit;
+    background: url(../images/icon-visible.svg) no-repeat 50% 50%;
+}
+
+.member-form .is--visible .button-password .ir {
+    background-image: url(../images/icon-invisible.svg);
+}
+
+.member-form .is--invalid .button-password {
+    right: 20px;
 }
 
 /* 공통 이메일 저장 */
@@ -99,7 +161,6 @@
     background-color: url(../images/icon-un-checked-square.svg) no-repeat 0 0;
 }
 
-
 .save-email input:checked + .checkbox {
     background-image: url(../images/icon-checked-square.svg);
 }
@@ -111,7 +172,7 @@
 
 /* 공통 로그인/회원가입 버튼 및 링크 */
 .member-form .button-container {
-    margin-top: 155px;
+    margin-top: 70px;
     user-select: none;
 }
 
@@ -129,6 +190,7 @@
   text-align: center;
 }
 
+/* 로그인 및 회원가입 버튼의 기본 값 및 배경 이미지 지정 */
 .button-fill::after,
 .button-stroke::after {
   content: "";
@@ -144,30 +206,30 @@
 
 .button-fill::after {
     background-image: url(../images/icon-arrow-darkblue.svg);
-  }
+}
   
-  .button-fill {
+.button-fill {
     color: var(--theme-primary);
     background-color: var(--theme-bright3);
     margin-bottom: 15px;
     border: 0;
-  }
-  
-  .button-stroke {
+}
+
+.button-stroke {
     opacity: 0.7;
     border: 1px solid var(--theme-bright3);
     color: var(--theme-bright2);
     background-color: transparent;
-  }
+}
 
-  .button-stroke:hover,
-  .button-stroke:focus {
+.button-stroke:hover,
+.button-stroke:focus {
     opacity: 1;
-  }
+}
 
-  .button-stroke::after {
+.button-stroke::after {
     background-image: url(../images/icon-arrow-white.svg);
-  }
+}
 
 @media all and (min-width: 768px) {
     /* 데스크탑 멤버 섹션*/
@@ -181,15 +243,16 @@
         margin-left: auto;
         margin-right: auto;
     }
+
     /* 데스크탑 로그인/회원가입 버튼 및 링크 */
     .member-form .button-container {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
     }
+
     .member-form .button-fill,
     .member-form .button-stroke {
         width: 260px;
-
     }
 }

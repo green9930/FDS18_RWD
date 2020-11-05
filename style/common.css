@@ -8,6 +8,7 @@ body {
 .app-footer-container {
     width: 100%;
 }
+
 /* 헤더 */
 /* 공통 헤더 */
 .app-header {
@@ -17,6 +18,7 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
 /* 공통 로고 */
 .brand {
     width: 172px;
@@ -174,6 +176,7 @@ body {
         margin-top: 10px;
     } */
 
+    /* 모바일 위로가기 */
     .button-goToTop {
         bottom: 15px;
         right: 15px;
@@ -223,6 +226,7 @@ body {
         width: 740px;
         margin: 0 auto;
     }
+
     /* 데스크탑 위로가기 */
     .button-goToTop {
         bottom: 50px;
