@@ -250,7 +250,7 @@
         flex-flow: row nowrap;
         justify-content: space-between;
     }
-
+    
     .member-form .button-fill,
     .member-form .button-stroke {
         width: 260px;
